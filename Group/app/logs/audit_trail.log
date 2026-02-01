@@ -1,0 +1,30 @@
+[AUDIT] 2026-01-09 20:39:22 - User: alice | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:42:13 - User: diana | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:42:50 - User: diana | Action: PUBLISH | Resource: CampaignVideo.mp4 | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 20:42:53 - User: diana | Action: MONITOR | Resource: AnalyticsReport.xlsx | Status: GRANTED
+[AUDIT] 2026-01-09 20:42:54 - User: diana | Action: PUBLISH | Resource: SensitiveData.pdf | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 20:42:56 - User: diana | Action: VIEW | Resource: PublicContent.jpg | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 20:42:57 - User: diana | Action: VIEW | Resource: PublicContent.jpg | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 20:42:58 - User: diana | Action: APPROVE | Resource: NewsArticle.html | Status: GRANTED
+[AUDIT] 2026-01-09 20:44:52 - User: bob | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:48:16 - User: bob | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:49:58 - User: bob | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:54:29 - User: alice | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:55:12 - User: alice | Action: MONITOR | Resource: AnalyticsReport.xlsx | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 20:55:14 - User: alice | Action: PUBLISH | Resource: SensitiveData.pdf | Status: COMPLIANCE_VIOLATION: VIOLATION: MFA not enabled
+[AUDIT] 2026-01-09 20:55:14 - User: alice | Action: PUBLISH | Resource: SensitiveData.pdf | Status: GRANTED
+[AUDIT] 2026-01-09 20:57:35 - User: bob | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 20:58:04 - User: bob | Action: MFA_CHALLENGE_SENT | Resource: EMAIL | Status: INITIATED
+[AUDIT] 2026-01-09 21:04:54 - User: alice | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-09 21:05:17 - User: alice | Action: PUBLISH | Resource: CampaignVideo.mp4 | Status: COMPLIANCE_VIOLATION: VIOLATION: MFA not enabled
+[AUDIT] 2026-01-09 21:05:17 - User: alice | Action: PUBLISH | Resource: CampaignVideo.mp4 | Status: GRANTED
+[AUDIT] 2026-01-09 21:05:20 - User: alice | Action: MONITOR | Resource: AnalyticsReport.xlsx | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 21:05:26 - User: alice | Action: PUBLISH | Resource: SensitiveData.pdf | Status: COMPLIANCE_VIOLATION: VIOLATION: MFA not enabled
+[AUDIT] 2026-01-09 21:05:26 - User: alice | Action: PUBLISH | Resource: SensitiveData.pdf | Status: GRANTED
+[AUDIT] 2026-01-09 21:05:31 - User: alice | Action: APPROVE | Resource: NewsArticle.html | Status: DENIED - Insufficient Permissions
+[AUDIT] 2026-01-09 21:05:42 - User: alice | Action: MFA_CHALLENGE_SENT | Resource: EMAIL | Status: INITIATED
+[AUDIT] 2026-01-09 21:06:10 - User: alice | Action: ELEVATED_ACCESS_REQUEST | Resource: CRITICAL_RESOURCE | Status: Action: EDIT | Justification: For educational purpose
+[AUDIT] 2026-01-09 21:06:30 - User: alice | Action: LOGOUT | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-15 18:09:04 - User: alice | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-15 18:09:56 - User: alice | Action: LOGOUT | Resource: SYSTEM | Status: SUCCESS
+[AUDIT] 2026-01-31 14:49:36 - User: alice | Action: LOGIN | Resource: SYSTEM | Status: SUCCESS

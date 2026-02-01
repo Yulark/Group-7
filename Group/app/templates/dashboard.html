@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Despite Group Access Control System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">🔐 Despite Group</a>
+            </div>
+            <div class="nav-menu">
+                <span class="nav-user">👤 {{ username }} ({{ role }})</span>
+                <button id="logoutBtn" class="nav-link btn-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h2>Menu</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="#overview" class="menu-link active">📊 Overview</a></li>
+                    <li><a href="#permissions" class="menu-link">🔑 Permissions</a></li>
+                    <li><a href="#access-test" class="menu-link">🧪 Access Test</a></li>
+                    <li><a href="#security" class="menu-link">🔒 Security</a></li>
+                    <li><a href="#reports" class="menu-link">📈 Reports</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="section-content animate-fade-up">
+                <div class="content-header">
+                    <h1>👋 Dashboard</h1>
+                    <p class="content-subtitle">Welcome to the Access Control System</p>
+                </div>
+
+                <div class="welcome-card card">
+                    <div class="welcome-header">
+                        <h2>Welcome, <strong>{{ username }}</strong>!</h2>
+                        <div class="role-badge">{{ role }}</div>
+                    </div>
+                    <div class="user-info">
+                        <div class="info-item">
+                            <span class="info-label">🕐 Last Login:</span>
+                            <span id="lastLogin" class="info-value">Loading...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">💻 Device Status:</span>
+                            <span id="deviceStatus" class="info-value">Checking...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">📍 Location:</span>
+                            <span class="info-value">Secure Environment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card card">
+                        <div class="stat-icon">🔑</div>
+                        <div class="stat-content">
+                            <h3>Permissions</h3>
+                            <p id="permissionCount" class="stat-number">-</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">💻</div>
+                        <div class="stat-content">
+                            <h3>Device Secure</h3>
+                            <p id="deviceSecure" class="stat-number">-</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-content">
+                            <h3>Access Status</h3>
+                            <p class="stat-number">✓ Active</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">🔒</div>
+                        <div class="stat-content">
+                            <h3>Security</h3>
+                            <p class="stat-number">High</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Permissions Section -->
+            <section id="permissions" class="section-content hidden animate-fade-up">
+                <div class="content-header">
+                    <h2>🔑 Your Permissions</h2>
+                    <p class="content-subtitle">Role-based access control permissions</p>
+                </div>
+                <div class="permissions-container">
+                    <div class="permission-card card">
+                        <h3>🎯 Access Permissions</h3>
+                        <ul id="permissionsList" class="permissions-list">
+                            <li class="animate-pulse">Loading...</li>
+                        </ul>
+                    </div>
+                    <div class="permission-card card">
+                        <h3>🎬 DRM Permissions</h3>
+                        <ul id="drmPermissionsList" class="permissions-list">
+                            <li class="animate-pulse">Loading...</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Access Control Test Section -->
+            <section id="access-test" class="section-content hidden animate-fade-up">
+                <div class="content-header">
+                    <h2>🧪 Access Control Test</h2>
+                    <p class="content-subtitle">Interactive testing for Zero Trust validation</p>
+                </div>
+                <div class="test-container">
+                    <div class="test-scenarios-list card">
+                        <h3>📋 Test Scenarios</h3>
+                        <div id="scenariosList" class="scenarios-grid">
+                            <p class="animate-pulse">Loading scenarios...</p>
+                        </div>
+                    </div>
+                    <div class="test-results card">
+                        <h3>📊 Results</h3>
+                        <div id="testResults" class="results-container">
+                            <p>Select a scenario to test</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section id="reports" class="section-content hidden animate-fade-up">
+                <div class="content-header">
+                    <h2>📈 System Reports</h2>
+                    <p class="content-subtitle">Access statistics and system health</p>
+                </div>
+                <div class="reports-container">
+                    <div class="report-card card">
+                        <h3>📊 Access Summary</h3>
+                        <div id="accessSummary" class="report-content">
+                            <p class="animate-pulse">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="report-card card">
+                        <h3>✅ System Status</h3>
+                        <div id="systemStatus" class="report-content">
+                            <ul class="status-list">
+                                <li class="status-active">🟢 Security: Active</li>
+                                <li class="status-active">🟢 Audit Logging: Running</li>
+                                <li class="status-active">🟢 DRM Protection: Enabled</li>
+                                <li class="status-active">🟢 Access Control: Enforced</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Section (NEW) -->
+            <section id="security" class="section-content hidden animate-fade-up security-section">
+                <div class="content-header">
+                    <h2>🔒 Advanced Security</h2>
+                    <p class="content-subtitle">Risk assessment and threat detection</p>
+                </div>
+
+                <div class="security-cards-container">
+                    <div class="security-card">
+                        <h3>📊 Risk Assessment</h3>
+                        <div id="riskAssessment" class="security-content">
+                            <p class="security-card-loading">Loading security data</p>
+                        </div>
+                    </div>
+
+                    <div class="security-card">
+                        <h3>🎯 Behavioral Analysis</h3>
+                        <div id="behaviorAnalysis" class="security-content">
+                            <p class="security-card-loading">Loading security data</p>
+                        </div>
+                    </div>
+
+                    <div class="security-card">
+                        <h3>✔️ Compliance Status</h3>
+                        <div id="complianceStatus" class="security-content">
+                            <p class="security-card-loading">Loading security data</p>
+                        </div>
+                    </div>
+
+                    <div class="security-card">
+                        <h3>🛡️ Device Security</h3>
+                        <div id="deviceSecurity" class="security-content">
+                            <p class="security-card-loading">Loading security data</p>
+                        </div>
+                    </div>
+
+                    <div class="security-card">
+                        <h3>🚨 Threat Detection</h3>
+                        <div id="threatDetection" class="security-content">
+                            <p class="security-card-loading">Loading security data</p>
+                        </div>
+                    </div>
+
+                    <div class="security-card">
+                        <h3>⚡ Rate Limiting</h3>
+                        <div id="rateLimitStatus" class="security-content">
+                            <p class="security-card-loading">Loading security data</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="security-actions-container">
+                    <h3>🔐 Security Actions</h3>
+                    <div class="security-actions-buttons">
+                        <button id="initiateMfa" class="btn-security-action">📱 Initiate MFA</button>
+                        <button id="requestElevatedAccess" class="btn-security-action">📤 Request Elevated Access</button>
+                        <button id="verifyDevice" class="btn-security-action">✓ Verify Device</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

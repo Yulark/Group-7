@@ -1,0 +1,7 @@
+[SECURITY ALERT] 2026-01-09 20:42:50 - diana: Unauthorized attempt to PUBLISH CampaignVideo.mp4
+[SECURITY ALERT] 2026-01-09 20:42:54 - diana: Unauthorized attempt to PUBLISH SensitiveData.pdf
+[SECURITY ALERT] 2026-01-09 20:42:56 - diana: Unauthorized attempt to VIEW PublicContent.jpg
+[SECURITY ALERT] 2026-01-09 20:42:57 - diana: Unauthorized attempt to VIEW PublicContent.jpg
+[SECURITY ALERT] 2026-01-09 20:55:12 - alice: Unauthorized attempt to MONITOR AnalyticsReport.xlsx
+[SECURITY ALERT] 2026-01-09 21:05:20 - alice: Unauthorized attempt to MONITOR AnalyticsReport.xlsx
+[SECURITY ALERT] 2026-01-09 21:05:31 - alice: Unauthorized attempt to APPROVE NewsArticle.html

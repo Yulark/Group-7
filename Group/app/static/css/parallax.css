@@ -1,0 +1,241 @@
+/* Parallax Scrolling Effects */
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.parallax-section {
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Parallax Animation */
+@keyframes parallaxMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100px;
+    }
+}
+
+/* Fade-in on scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Parallax zoom effect */
+.parallax-zoom {
+    overflow: hidden;
+}
+
+.parallax-zoom-item {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* 3D perspective effects */
+.parallax-perspective {
+    perspective: 1000px;
+}
+
+.parallax-perspective-item {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Staggered animations */
+.stagger-item {
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover lift effect */
+.hover-lift {
+    transition: var(--transition);
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth gradient transitions */
+.gradient-transition {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), #ff6b9d);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, select, textarea {
+    transition: var(--transition);
+}
+
+/* Parallax text effect */
+.parallax-text {
+    position: relative;
+    display: inline-block;
+}
+
+.parallax-text::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    color: rgba(233, 69, 96, 0.3);
+    clip-path: polygon(0 0, 0% 100%, 0 100%, 0 0);
+    animation: revealText 0.6s ease-out forwards;
+}
+
+@keyframes revealText {
+    to {
+        clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 0);
+    }
+}
+
+/* Intersection Observer effects */
+.observe-fade {
+    opacity: 0;
+}
+
+.observe-fade.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.observe-slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.observe-slide-left.visible {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.observe-slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.observe-slide-right.visible {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Shimmer loading effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(90deg, #f6f7f8 25%, #edeef1 50%, #f6f7f8 75%);
+    background-size: 1000px 100%;
+}
+
+/* Smooth reveal on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

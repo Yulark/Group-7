@@ -1,0 +1,37 @@
+{
+  "name": "access-control-system",
+  "version": "2.0.0",
+  "description": "Enterprise-Grade Access Control System with Advanced Security Features",
+  "main": "run_server.py",
+  "scripts": {
+    "dev": "python run_server.py",
+    "start": "python run_server.py",
+    "setup": "python setup.py",
+    "install-deps": "pip install -r requirements.txt",
+    "clean": "rmdir /s /q venv 2>nul & echo Virtual environment removed",
+    "reset": "npm run clean && npm run setup",
+    "test": "echo Testing application... && python -m pytest",
+    "launch": "start.bat"
+  },
+  "keywords": [
+    "access-control",
+    "security",
+    "flask",
+    "enterprise",
+    "zero-trust"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "http://localhost:5000"
+}

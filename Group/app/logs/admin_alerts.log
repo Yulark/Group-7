@@ -1,0 +1,13 @@
+ALERT [CRITICAL] 2026-01-09 20:42:50 - User: diana | Message: Unauthorized access attempt - Action: PUBLISH, Resource: CampaignVideo.mp4
+ALERT [CRITICAL] 2026-01-09 20:42:54 - User: diana | Message: Unauthorized access attempt - Action: PUBLISH, Resource: SensitiveData.pdf
+ALERT [CRITICAL] 2026-01-09 20:42:56 - User: diana | Message: Unauthorized access attempt - Action: VIEW, Resource: PublicContent.jpg
+ALERT [CRITICAL] 2026-01-09 20:42:57 - User: diana | Message: Unauthorized access attempt - Action: VIEW, Resource: PublicContent.jpg
+ALERT [HIGH] 2026-01-09 20:55:12 - User: alice | Message: Anomalous behavior detected: Off-hours activity, Unusual action: MONITOR, New resource access: AnalyticsReport.xlsx
+ALERT [CRITICAL] 2026-01-09 20:55:12 - User: alice | Message: Unauthorized access attempt - Action: MONITOR, Resource: AnalyticsReport.xlsx
+ALERT [HIGH] 2026-01-09 20:55:14 - User: alice | Message: Anomalous behavior detected: Off-hours activity, Unusual action: PUBLISH, New resource access: SensitiveData.pdf
+ALERT [HIGH] 2026-01-09 21:05:17 - User: alice | Message: Anomalous behavior detected: Off-hours activity, Unusual action: PUBLISH, New resource access: CampaignVideo.mp4
+ALERT [HIGH] 2026-01-09 21:05:20 - User: alice | Message: Anomalous behavior detected: Off-hours activity, Unusual action: MONITOR, New resource access: AnalyticsReport.xlsx
+ALERT [CRITICAL] 2026-01-09 21:05:20 - User: alice | Message: Unauthorized access attempt - Action: MONITOR, Resource: AnalyticsReport.xlsx
+ALERT [HIGH] 2026-01-09 21:05:26 - User: alice | Message: Anomalous behavior detected: Off-hours activity, Unusual action: PUBLISH, New resource access: SensitiveData.pdf
+ALERT [CRITICAL] 2026-01-09 21:05:31 - User: alice | Message: Unauthorized access attempt - Action: APPROVE, Resource: NewsArticle.html
+ALERT [MEDIUM] 2026-01-09 21:06:10 - User: admin | Message: Elevated access request from alice: EDIT on CRITICAL_RESOURCE. Justification: For educational purpose

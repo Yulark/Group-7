@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despite Group - Access Control System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/parallax.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">Despite Group</a>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#security" class="nav-link">Security</a>
+                <a href="/login" class="nav-link btn-login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section class="hero parallax" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%231a1a2e%22 width=%221200%22 height=%22600%22/></svg>')">
+        <div class="hero-content">
+            <h1 class="hero-title">Zero Trust Architecture</h1>
+            <p class="hero-subtitle">Secure Access Control & Digital Rights Management</p>
+            <p class="hero-description">Protecting Despite Group's Digital Assets with Advanced Security</p>
+            <a href="/login" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Section 1: Security Overview -->
+    <section class="section features" id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Zero Trust Architecture</h3>
+                    <p>No device or user is trusted by default. Every access request is verified against identity, device security, and permissions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Role-Based Access Control</h3>
+                    <p>Admin, Creator, PR Manager, and Analyst roles with granular permissions for content management and monitoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Digital Rights Management</h3>
+                    <p>Automatic watermarking, content integrity verification, and license enforcement to protect proprietary content.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Audit & Monitoring</h3>
+                    <p>Comprehensive logging of all access attempts, security events, and content modifications for compliance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Real-Time Alerts</h3>
+                    <p>Immediate notifications to administrators of security incidents, unauthorized access attempts, and anomalies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔑</div>
+                    <h3>Multi-Factor Authentication</h3>
+                    <p>Enhanced security with MFA support, session management, and device verification protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Architecture -->
+    <section class="section architecture parallax-section" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%23f5f5f5%22 width=%221200%22 height=%22600%22/></svg>')">
+        <div class="container">
+            <h2>System Architecture</h2>
+            <div class="architecture-content">
+                <div class="arch-diagram">
+                    <div class="arch-layer">
+                        <strong>Client Devices</strong>
+                        <p>(Desktop/Laptop/Mobile)</p>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <strong>Secure VPN</strong>
+                        <p>(Encrypted Connection)</p>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <strong>Application Server</strong>
+                        <p>(RBAC + CMS + DRM)</p>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <strong>Database Server</strong>
+                        <p>(Content + Audit Logs)</p>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <strong>Cloud Backup</strong>
+                        <p>(Disaster Recovery)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Security Features -->
+    <section class="section security" id="security">
+        <div class="container">
+            <h2>Security Implementation</h2>
+            <div class="security-grid">
+                <div class="security-item">
+                    <h3>Identity Verification</h3>
+                    <ul>
+                        <li>SHA-256 Password Hashing</li>
+                        <li>Multi-Factor Authentication</li>
+                        <li>Session Management (15 min timeout)</li>
+                        <li>Failed Login Tracking</li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <h3>Device Security</h3>
+                    <ul>
+                        <li>Device Validation</li>
+                        <li>Security Compliance Checks</li>
+                        <li>Endpoint Protection</li>
+                        <li>Secure Connection Verification</li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <h3>Authorization Control</h3>
+                    <ul>
+                        <li>Role-Based Access Control</li>
+                        <li>Permission Enforcement</li>
+                        <li>Resource-Level Access</li>
+                        <li>Action Validation</li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <h3>Content Protection</h3>
+                    <ul>
+                        <li>DRM Watermarking</li>
+                        <li>Content Integrity Verification</li>
+                        <li>License Enforcement</li>
+                        <li>Piracy Prevention</li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <h3>Monitoring & Logging</h3>
+                    <ul>
+                        <li>Audit Trail</li>
+                        <li>Security Event Logs</li>
+                        <li>Access Logs</li>
+                        <li>Alert Notifications</li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <h3>Incident Response</h3>
+                    <ul>
+                        <li>Real-Time Alerts</li>
+                        <li>Admin Notifications</li>
+                        <li>Immediate Escalation</li>
+                        <li>Forensic Recording</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Test Scenarios -->
+    <section class="section test-scenarios parallax-section">
+        <div class="container">
+            <h2>Interactive Testing</h2>
+            <p class="section-subtitle">Login to test the access control system with different user roles</p>
+            <div class="test-info">
+                <h3>Demo Credentials:</h3>
+                <div class="credentials-grid">
+                    <div class="credential-card">
+                        <strong>Creator</strong>
+                        <p>Username: alice</p>
+                        <p>Password: securePass123</p>
+                        <small>Can create and publish content</small>
+                    </div>
+                    <div class="credential-card">
+                        <strong>Admin</strong>
+                        <p>Username: bob</p>
+                        <p>Password: adminPass456</p>
+                        <small>Full system access and monitoring</small>
+                    </div>
+                    <div class="credential-card">
+                        <strong>Analyst</strong>
+                        <p>Username: charlie</p>
+                        <p>Password: analyst789</p>
+                        <small>Device security will fail - for testing</small>
+                    </div>
+                    <div class="credential-card">
+                        <strong>PR Manager</strong>
+                        <p>Username: diana</p>
+                        <p>Password: pr_manager123</p>
+                        <small>Can approve and monitor content</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Call to Action -->
+    <section class="section cta parallax-cta" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22><rect fill=%22%23242424%22 width=%221200%22 height=%22400%22/></svg>')">
+        <div class="container">
+            <h2>Ready to Secure Your Digital Assets?</h2>
+            <p>Experience Zero Trust Architecture in action with our interactive system.</p>
+            <a href="/login" class="btn-primary">Login Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Despite Group of Companies. Access Control System - BSc Cybersecurity Project.</p>
+            <p>Zero Trust Architecture & Digital Rights Management Implementation</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/parallax.js') }}"></script>
+</body>
+</html>
